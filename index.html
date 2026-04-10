@@ -12,6 +12,7 @@ body {
     color: white;
 }
 
+/* ПЕРВЫЙ ЭКРАН */
 .container {
     display: flex;
     height: 100vh;
@@ -23,8 +24,6 @@ body {
     background: #1c1c1c;
     padding: 20px;
     box-sizing: border-box;
-    position: relative;
-    z-index: 2;
 }
 
 .left img {
@@ -36,14 +35,12 @@ body {
 .right {
     width: 60%;
     position: relative;
-    z-index: 1;
 }
 
 .right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    pointer-events: none;
 }
 
 /* Текст */
@@ -55,74 +52,62 @@ body {
 
 .overlay h1 {
     font-size: 50px;
-    margin: 0;
     color: orange;
-}
-
-.overlay p {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-/* Фразы */
-.phrases {
-    margin-top: 20px;
-}
-
-.phrases span {
-    display: inline-block;
-    background: crimson;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 8px;
-    font-weight: bold;
 }
 
 /* КНОПКИ */
 .join-btn {
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin-top: 15px;
     padding: 15px 25px;
     background: linear-gradient(45deg, orange, red);
     color: white;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 10px;
-    transition: 0.3s;
-    position: relative;
-    z-index: 5;
 }
 
-.join-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px red;
+/* ГАЛЕРЕЯ */
+.gallery {
+    padding: 50px;
+    background: #000;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: orange;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
 }
 </style>
 </head>
 
 <body>
 
+<!-- ПЕРВЫЙ ЭКРАН -->
 <div class="container">
 
-    <!-- ЛЕВО -->
     <div class="left">
         <h2>Участники</h2>
-        <img src="participants.png" alt="участники">
-
-        <div class="phrases">
-            <span>МАНГО</span>
-            <span>КРУТЫЕ ЭПШТЕЙНЫ</span>
-            <span>ТУТ ВЕСЕЛО</span>
-        </div>
+        <img src="participants.png">
 
         <p>🔥 Сервер, где каждый становится ЭПШТЕЙНОМ</p>
-        <p>😎 Уникальные ники: Батькоэпштейн, Запретэпштейн и другие</p>
-        <p>🎭 Аватары: знаменитости + тело эпштейна</p>
-        <p>💬 Мемы, угар и полный хаос</p>
-        <p>🚀 Здесь нет скучных людей — только легенды</p>
 
-        <!-- КНОПКИ -->
         <a href="https://discord.gg/Yafvt7hs" target="_blank" class="join-btn">
             Войти в Елда Сквад
         </a>
@@ -130,20 +115,28 @@ body {
         <a href="history.html" target="_blank" class="join-btn">
             История Миньёнов
         </a>
-
     </div>
 
-    <!-- ПРАВО -->
     <div class="right">
-        <img src="main.png" alt="главная фотка">
+        <img src="main.png">
 
         <div class="overlay">
             <h1>ЕЛДА СКВАД</h1>
-            <p>Добро пожаловать в самый странный сервер</p>
-            <p>Где каждый — немного ЭПШТЕЙН 😈</p>
         </div>
     </div>
 
+</div>
+
+<!-- ГАЛЕРЕЯ -->
+<div class="gallery">
+    <h2>ГАЛЕРЕЯ</h2>
+
+    <div class="gallery-grid">
+        <img src="art1.png">
+        <img src="art2.png">
+        <img src="art3.png">
+        <img src="art4.png">
+    </div>
 </div>
 
 </body>
