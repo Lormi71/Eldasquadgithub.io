@@ -43,7 +43,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    pointer-events: none; /* чтобы не мешала кнопке */
+    pointer-events: none;
 }
 
 /* Текст */
@@ -78,10 +78,11 @@ body {
     font-weight: bold;
 }
 
-/* КНОПКА */
+/* КНОПКИ */
 .join-btn {
     display: inline-block;
     margin-top: 20px;
+    margin-right: 10px;
     padding: 15px 25px;
     background: linear-gradient(45deg, orange, red);
     color: white;
@@ -91,7 +92,6 @@ body {
     transition: 0.3s;
     position: relative;
     z-index: 5;
-    cursor: pointer;
 }
 
 .join-btn:hover {
@@ -122,10 +122,15 @@ body {
         <p>💬 Мемы, угар и полный хаос</p>
         <p>🚀 Здесь нет скучных людей — только легенды</p>
 
-        <!-- КНОПКА -->
+        <!-- КНОПКИ -->
         <a href="https://discord.gg/Yafvt7hs" target="_blank" class="join-btn">
             Войти в Елда Сквад
         </a>
+
+        <a href="history.html" target="_blank" class="join-btn">
+            История Миньёнов
+        </a>
+
     </div>
 
     <!-- ПРАВО -->
